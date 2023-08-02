@@ -11,12 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
 const typeorm_1 = require("typeorm");
+const Detail_Restaurant_1 = require("../restaurant/Detail_Restaurant");
 let User = exports.User = class User {
 };
 __decorate([
     (0, typeorm_1.PrimaryColumn)('increment'),
     __metadata("design:type", Number)
 ], User.prototype, "user_id", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => Detail_Restaurant_1.Detail_Restaurant, (detail_rest) => detail_rest.user_id),
+    __metadata("design:type", Array)
+], User.prototype, "detail_rest", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: 'varchar', nullable: false }),
     __metadata("design:type", String)

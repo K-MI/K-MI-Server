@@ -3,20 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
- 
   "scripts": {
-    "server": "tsc-watch --onSuccess \"node dist/index.js\" ",
+    "server": "tsc-watch --onSuccess \"node dist/index.js\"",
     "build": "tsc",
     "start": "npm run build && node ./dist",
     "lint": "./node_modules/.bin/eslint ."
-    
   },
+  
   "author": {
     "name": "Kim Soo Hyun",
     "email": "spancer1947@gmail.com"
   },
   "license": "ISC",
   "dependencies": {
+    "@nestjs/common": "^10.1.3",
     "@nestjs/typeorm": "^10.0.0",
     "@types/bcrypt": "^5.0.0",
     "@types/cookie-parser": "^1.4.3",
